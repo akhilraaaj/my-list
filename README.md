@@ -1,6 +1,6 @@
 # Electron To-Do List Desktop App
 
-This is a cross platform todo list desktop application built on electron that allows users to add and remove items or tasks from the list allowing users to organize and prioritize tasks/items.
+This is a cross platform to-do list desktop application built on electron that allows users to add and remove items or tasks from the list allowing users to organize and prioritize tasks/items.
 
 ## Usage
 
