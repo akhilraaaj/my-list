@@ -1,0 +1,58 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+     
+
+.main-body
+{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 9pt;
+    /* background-color: #aae7e5; */
+    background-color: #ffe5b4;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.navbar {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.collection {
+    background-color: #aae7e5;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.h3 {
+    text-align: center;
+}
+
+.add-body {
+    background-color: #ffe5b4;
+opacity: 0.8;
+background-image:  radial-gradient(#e55349 0.5px, transparent 0.5px), radial-gradient(#e55349 0.5px, #ffe5b4 0.5px);
+background-size: 20px 20px;
+background-position: 0 0,10px 10px;
+}
+
+.placeholder {
+    font-weight: bolder;
+    color: #008040;
+}
+
+.info-body {
+    background-color: #ffe5b4;
+opacity: 0.8;
+background-image:  radial-gradient(#e55349 0.5px, transparent 0.5px), radial-gradient(#e55349 0.5px, #ffe5b4 0.5px);
+background-size: 20px 20px;
+background-position: 0 0,10px 10px;
+}
+
+.collection-item {
+    font-weight:700;
+}

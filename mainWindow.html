@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="main-body">
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <a class="heading brand-logo center">TO DO LIST <i class="material-icons right">done_all</i></a>   
+    </div>
+  </nav>
+  <div>
+    <ul></ul>
+  </div>
+
+  <script>
+    const electron = require('electron');
+    const {ipcRenderer} = electron;
+    const ul = document.querySelector('ul');
+
+    //Add item
+    ipcRenderer.on('item:add', function(e, item) {
+      ul.className = 'col s2 collection green lighten-4';
+      const li = document.createElement('li');
+      li.className = 'col s2 collection-item green lighten-3';
+      const itemText = document.createTextNode(item);
+
+      li.appendChild(itemText);
+      ul.appendChild(li);
+    });
+    
+    //Clear item
+    ipcRenderer.on('item:clear', function(){
+      ul.innerHTML = '';
+      ul.className = '';
+    });
+
+    //Remove a single ul item on double click
+    ul.addEventListener('dblclick', removeAnItem);
+
+    function removeAnItem(e) {
+      e.target.remove();
+      if(ul.children.length == 0) {
+        ul.className = '';
+      }
+    }
+
+
+  </script>
+</body>
+</html>
